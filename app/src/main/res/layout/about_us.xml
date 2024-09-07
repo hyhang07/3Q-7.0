@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#7db3fa">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="5dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@mipmap/logo_round"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_menu"
+            android:background="@android:color/transparent"
+            android:layout_gravity="end"
+            android:padding="5dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/about_us_rounded_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/about_us_rounded_background2"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About Us"
+                    android:background="@drawable/about_us_rounded_background2"
+                    android:textColor="#000000"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:paddingBottom="16dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/about_us_rounded_background2"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:gravity="center_horizontal">
+
+
+                <TextView
+                    android:id="@+id/dateDataTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:text="The mobile application '3Q' derives its name from three essential pillars of health: Quality, Quantity, and Quickness. It is designed to help users achieve a higher quality of life by closely monitoring key health metrics such as BMI, calorie intake, and hydration levels. By tracking the quantity of food consumed, water intake, and other activities, the app ensures that users maintain a balanced and healthy lifestyle. Additionally, 3Q provides quick and easy access to vital health information, enabling users to make informed decisions rapidly. Together, these three 'Q's' encapsulate the app's holistic approach to personal health management.\n\nAt our 3Q application, we are committed to helping you lead a balanced and healthy lifestyle by providing a comprehensive platform that integrates various aspects of well-being. Our app offers tools for tracking diet, exercise, sleep, mental well-being, and time management, all in one place. \n\nWe recognize the challenges that come with maintaining a healthy lifestyle, especially in today’s fast-paced world. That's why we've designed our app to be accessible and user-friendly for everyone, including the elderly, people with disabilities, and those less familiar with technology. By combining health and productivity features with a social support element, we aim to create a more engaging and supportive experience.\n\nWhether you're looking to monitor your diet, keep up with a workout routine, or simply stay mindful, our app is here to guide you. Join us on this journey to better health and well-being, and together, let’s build a healthier, happier future." />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo"
+        android:label="3Q"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+           android:name=".SplashScreen"
+           android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop"/>
+
+       <!-- go to MainActivity directly-->
+
+        <!-- zh -->
+        <activity android:name=".LoginPage"/>
+        <activity android:name=".QuizPage"/>
+        <activity android:name=".RegisterPage"/>
+        <activity android:name=".FriendList"/>
+<!--        <activity android:name=".AddFriend"/>-->
+        <activity android:name=".Redeem"/>
+        <activity android:name=".VoucherDetailsActivity"/>
+
+
+        <!-- kl -->
+        <activity android:name="menu_profile"/>
+        <activity android:name="menu_setting"/>
+        <activity android:name="calories"/>
+        <activity android:name="bmi"/>
+        <activity android:name="calories_data"/>
+        <activity android:name="about_us"/>
+
+
+
+        <!-- yh -->
+        <activity
+            android:name=".sleepReminder2"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".drinkWaterReminder"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name=".drinkWater"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".DestinationReminder"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="false" />
+
+        <activity
+            android:name=".sleepTimeNSuggestion"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".sleep"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="false" />
+
+        <receiver android:name=".ReminderReceiver" />
+        <receiver android:name=".drinkWaterReminderReceiver" />
+
+        <!-- wy -->
+        <activity
+            android:name=".FoodRecipe"
+            android:exported="false" />
+        <activity
+            android:name=".RecycleViewAdapter"
+            android:exported = "false" />
+        <activity
+            android:name=".MainRecipe"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

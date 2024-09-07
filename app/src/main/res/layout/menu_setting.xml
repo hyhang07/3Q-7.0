@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mi"
+
+
+    android:padding="16dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/settingsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/menu_setting_rounded_background">
+
+                <Button
+                    android:id="@+id/delete_BMI_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="16dp"
+                    android:text="Delete BMI data"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/mi" />
+
+                <Button
+                    android:id="@+id/delete_sleep_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/mi"
+                    android:padding="16dp"
+                    android:text="Delete SLEEP data"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/delete_Calories_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="16dp"
+                    android:text="Delete Calories data"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/mi" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/menu_setting_rounded_background">
+
+                <Button
+                    android:id="@+id/about_us_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="16dp"
+                    android:text="About Us"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/mi" />
+
+                <Button
+                    android:id="@+id/sign_out_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="16dp"
+                    android:text="Sign Out"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@color/red" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

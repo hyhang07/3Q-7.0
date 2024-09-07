@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c2c26d"
+    android:gravity="center">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="5dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@mipmap/logo_round"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_menu"
+            android:background="@android:color/transparent"
+            android:layout_gravity="end"
+            android:padding="5dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background_calories_dark"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calories"
+                android:textColor="#000000"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <!-- First Column -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background_calories"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal">
+
+
+                <Spinner
+                    android:id="@+id/foodSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/spinner_background"
+                    android:contextClickable="false"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textColorHint="#888888" />
+
+                <EditText
+                    android:id="@+id/manualFoodInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Enter Food Name manually"
+                    android:inputType="text"
+                    android:textSize="27sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#888888"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/manualCalorieInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Enter calories manually"
+                    android:inputType="numberDecimal"
+                    android:textSize="27sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#888888"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/addFoodButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/primary"
+                    android:text="Add Food"
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background_calories"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal">
+
+                <TableLayout
+                    android:id="@+id/foodTableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+
+                    <TableLayout>
+
+                        <TextView
+                            android:layout_width="125dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Food you have eaten for today"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                    </TableLayout>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="17sp"
+                            android:text="Food Item"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="134dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="17sp"
+                            android:text="Total Calories"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="115dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="17sp"
+                            android:text="Cumulative Calories"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/foodLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+
+
+
+                </TableLayout>
+
+                <Button
+                    android:id="@+id/goToDataButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primary"
+                    android:text="Show Detail"
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal" />
+
+
+            </LinearLayout>
+
+
+
+            <!-- Third Column -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background_calories"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="16dp"
+                    android:text="Calculate Your BMR and AMR"
+                    android:textColor="#333333"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/weightInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Enter weight (kg)"
+                    android:inputType="numberDecimal"
+                    android:textSize="27sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#888888" />
+
+                <EditText
+                    android:id="@+id/heightInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Enter height (cm)"
+                    android:inputType="numberDecimal"
+                    android:textSize="27sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#888888" />
+
+                <EditText
+                    android:id="@+id/ageInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Enter age (years)"
+                    android:inputType="number"
+                    android:textSize="27sp"
+                    android:textColor="#333333"
+                    android:textColorHint="#888888" />
+
+
+                <Spinner
+                    android:id="@+id/activityLevelSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown"
+                    android:textColor="#333333"
+                    android:textColorHint="#888888" />
+
+                <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/primary"
+                    android:text="Calculate"
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="16dp"
+                    android:textColor="#333333"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <!-- Forth Column -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background_calories"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:gravity="center_horizontal">
+
+
+                <TextView
+                    android:id="@+id/info_Calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingBottom="16dp"
+                    android:textColor="#333333"
+                    android:textSize="24sp"
+                    android:text="What is BMR and AMR?\n\nBMR (Basal Metabolic Rate) \n\n -tells you the minimum calories you need for basic bodily functions.\n\n\n\n AMR (Active Metabolic Rate) \n\n -gives you a complete estimate of how many calories you need in total, considering your daily activities."
+                    />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

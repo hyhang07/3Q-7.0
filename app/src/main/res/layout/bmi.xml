@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/peach">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="5dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@mipmap/logo_round"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            />
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_menu"
+            android:background="@android:color/transparent"
+            android:layout_gravity="end"
+            android:padding="5dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bmi_rounded_background"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/BMI_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/BMI_label"
+                        android:textSize="40sp"
+                        android:layout_marginBottom="16dp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/weightLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weight_label"
+                        android:textSize="25sp"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/weightInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/weight_hint"
+                        android:textSize="25sp"
+                        android:layout_marginBottom="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/heightLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/height_label"
+                        android:textSize="25sp"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/heightInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/height_hint"
+                        android:textSize="25sp"
+                        android:layout_marginBottom="16dp"
+                        />
+
+                    <Button
+                        android:id="@+id/calculateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calculate_button"
+                        android:textSize="25sp"
+                        android:layout_marginBottom="16dp"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@color/peach"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/bmiResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bmi_result"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/bmiCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_label"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bmi_rounded_background"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What is BMI? \n\nBMI (Body Mass Index)\n\n-a simple calculation used to assess whether a person has a healthy body weight for their height. \n\n\nUnderweight: BMI smaller than 18.5\n\nNormal weight: BMI 18.5 between 24.9\n\n Overweight: BMI 25 between 29.9\n\nObesity: BMI bigger or equal to 30"
+                        android:textSize="25sp"
+                        android:layout_marginBottom="16dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
+
